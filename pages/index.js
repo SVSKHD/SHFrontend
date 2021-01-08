@@ -1,65 +1,61 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import {Container,Row,Col, Button} from "reactstrap"
+import Layout from "../Components/Layout/Layout"
+import {APP_NAME,DOMAIN} from "../config"
+import {FaFacebookF,FaInstagram} from "react-icons/fa"
+import IndexCard from "../Components/IndexCard"
+import DesiredCarousel from "../Components/Carousel"
+import Seo from "../Components/seo"
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+  <div >
+  <Seo
+  title={"SevenHills Tirupati | FrontPage of Tirupati and Tirumala"}
+  dcontent={`Stay tuned to regular news of the Tirupati and Tirumala , 
+  The best services and information are here`}
+  keywords={`SevenHills Tirupati , SevenHillsTirupati, Tirumala Tirupati Balaji , Govinda`}
+  
+  />
+  <div className="slider">
+  <hr/>
+  <DesiredCarousel/>
+  </div>
+  <Container>
+  <div className="indexlayout">
+    <h1 className="display-2">{APP_NAME}</h1>
+    <h3>FrontPage of Tirupati and Tirumala</h3>
+    <div>
+    <IndexCard
+    title={<h5>Social Handle</h5>}
+    icon1={<FaFacebookF size={25}/>}
+    icon2={ <FaInstagram size={25}/>}
+    />
+    <hr/>
+    <h1>Our Youtube Channel</h1>
+    <hr/>
+    <Row>
+      <Col>
+      <div className="embed-responsive embed-responsive-16by9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XKXzkdateHk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+      </Col>
+      <Col>
+      <div className="embed-responsive embed-responsive-16by9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9shxMMQZWoU" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </Col>
+    </Row>
+    <hr/>
+  </div>
+  </div>
+  
+  </Container>
+  <div>
+    
+  </div>
+  <Layout>
+   <h1>Hello</h1>
+  </Layout>
+  </div>
   )
 }

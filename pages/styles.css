@@ -1,0 +1,151 @@
+.Navbar{
+border-radius: 0.5rem;
+color: azure;
+font-weight: 600;
+background: linear-gradient(-45deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+.brand{
+    color:aliceblue ;
+}
+
+
+/* layout */
+.Layoutnav{
+  padding-bottom: 4rem;
+}
+.layoutFot{
+  padding-top: 4rem;
+}
+
+
+
+
+
+
+
+.Footer{
+border-radius: 1rem;
+color: azure;
+font-weight: 600;
+background: linear-gradient(-45deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+
+/* indexpage */
+.indexlayout{
+  text-align: center;
+}
+.ISH{
+  margin: 0.1rem;
+}
+.carousel-item > img { 
+  width: 100%; 
+}
+.slider{
+padding-bottom: 2rem;
+}
+.authslider{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.signin{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+.SH{
+  margin: 0.4rem;
+}
+
+/* Dashboard */
+.UserDashboard{
+  text-align: center;
+}
+.AdminDashboard{
+  text-align: center;
+}
+.categorytag{
+  padding-bottom: 7rem;
+}
+
+.Blog{
+  margin-bottom:0.5rem;
+}
+.BlogKeywords{
+  margin-bottom: 0.5rem;
+}
+.blogContent{
+  margin-bottom: 1rem;
+}
+.ql-editor {
+  min-height: 500px;
+}
+
+/* Blog */
+.blogimage{
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.BlogCard{
+ margin: 0.3rem; 
+}
+.load{
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+background-image: linear-gradient(to right top, );
+
+
+
+
+.zoom{
+  transition: 1s ease;
+}
+.zoom:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+}
