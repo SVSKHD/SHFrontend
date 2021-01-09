@@ -1,7 +1,7 @@
 import Layout from "../../Components/Layout/Layout"
 import {Container, Row, Col, ListGroup,ListGroupItem } from "reactstrap"
 import Link from "next/link"
-import Admin from "../../../Components/auth/Admin"
+import Admin from "../../Components/auth/Admin"
 const AdminIndex = () =>{
     return(
       <div>

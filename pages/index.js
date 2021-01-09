@@ -5,6 +5,8 @@ import {FaFacebookF,FaInstagram} from "react-icons/fa"
 import IndexCard from "../Components/IndexCard"
 import DesiredCarousel from "../Components/Carousel"
 import Seo from "../Components/seo"
+
+
 export default function Home() {
   return (
   <div >
