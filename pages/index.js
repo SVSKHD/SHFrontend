@@ -1,11 +1,12 @@
-import {Container,Row,Col, Button} from "reactstrap"
+import {Container,Row,Col, Button, Card ,CardBody} from "reactstrap"
 import Layout from "../Components/Layout/Layout"
 import {APP_NAME,DOMAIN} from "../config"
-import {FaFacebookF,FaInstagram} from "react-icons/fa"
+import {FaFacebookF,FaInstagram , FaBook} from "react-icons/fa"
 import IndexCard from "../Components/IndexCard"
 import DesiredCarousel from "../Components/Carousel"
 import Seo from "../Components/seo"
-
+import Type from "../Components/indexTyped"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -15,7 +16,6 @@ export default function Home() {
   dcontent={`Stay tuned to regular news of the Tirupati and Tirumala , 
   The best services and information are here`}
   keywords={`SevenHills Tirupati , SevenHillsTirupati, Tirumala Tirupati Balaji , Govinda`}
-  
   />
   <div className="slider">
   <hr/>
@@ -59,7 +59,40 @@ export default function Home() {
   </div>
   <Layout>
     <Container>
-   <h1>Everything about Tirupati and Tirumala</h1>
+     <Row>
+     <Col>
+     <h1>Everything about Tirupati and Tirumala</h1>
+     <Type/>
+     </Col>
+     <Col>
+
+     <Card>
+      <CardBody>
+     <div align="center">
+     <img height="150" width="150"
+           className="rounded-circle img-thumbnail border-warning "
+           align="center"
+           src="../../static/images/SV.png"
+     />
+     </div>
+     </CardBody>
+     </Card>
+
+     </Col>
+     <div>
+       <Button
+       target="_blank"
+       size="lg" 
+       outline color="success">
+        <Link  href="/blogs">
+        <FaBook size={30}/>
+        </Link>
+        
+       </Button>
+     </div>
+     </Row>
+     <hr/>
+
    </Container>
   </Layout>
   </div>

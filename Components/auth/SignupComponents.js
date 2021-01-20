@@ -1,5 +1,16 @@
 import {useState,useEffect} from "react"
-import {Form,FormGroup,Input,InputGroup,InputGroupAddon,Label,Container,Button,Card} from "reactstrap"
+import {
+    Form,
+    FormGroup,
+    Input,
+    InputGroup,
+    InputGroupAddon,
+    Label,
+    Container,
+    Button,
+    Card,
+    CardBody
+} from "reactstrap"
 import {FaSignInAlt} from "react-icons/fa"
 import Router from "next/router"
 import { authenticate, isAuth, signup } from "../../actions/auth";
@@ -57,6 +68,8 @@ const SignupComponent = () =>{
 
     const signupForm = () => {
         return (
+            <Card>
+            <CardBody>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <input
@@ -97,6 +110,8 @@ const SignupComponent = () =>{
                     </Button>
                 </div>
             </form>
+            </CardBody>
+         </Card>
         );
     };
 

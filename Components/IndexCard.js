@@ -8,10 +8,10 @@ const IndexCard = ({title,icon1,icon2,link1,link2}) =>{
           <Container>
           <Row>
           <Col>
-          <Button className="ISH" href={link1} outline color="dark">{icon1}</Button>
+          <Button className="ISH" target="_blank" href={link1} outline color="dark">{icon1}</Button>
           </Col>
           <Col>
-          <Button className="ISH" href={link2} outline color="dark">{icon2}</Button>
+          <Button className="ISH" target="_blank" href={link2} outline color="dark">{icon2}</Button>
           </Col>
           </Row>
           </Container>

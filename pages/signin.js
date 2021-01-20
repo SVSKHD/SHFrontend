@@ -29,6 +29,7 @@ const Signup = ({router}) =>{
         <div className="signin">
         <h1 className="display-5">Singin here</h1>
         {showRedirectMessage()}
+        <hr/>
         <SigninComponent/>
        
         </div>

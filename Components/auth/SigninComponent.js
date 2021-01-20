@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react"
-import {Form,FormGroup,Input,InputGroup,InputGroupAddon,Label,Container,Button,Card} from "reactstrap"
+import {Form,FormGroup,Input,InputGroup,InputGroupAddon,Label,Container,Button,Card, CardBody} from "reactstrap"
 import {FaSignInAlt} from "react-icons/fa"
 import Router from "next/router"
 import { authenticate, isAuth, signin } from "../../actions/auth";
@@ -53,12 +53,13 @@ const SigninForm = ()=>{
     <Form onSubmit={handleSubmit}>
       <FormGroup>
          <Card>
-         <Container>
+         <CardBody>
+        
          
-         <Label>UserName</Label>
+         <Label>UserEmail</Label>
          <Input 
          type="text" 
-         name="username" 
+         name="UserEmail" 
          onChange={handleChange('email')}
          value={email}
          placeholder="Email" 
@@ -75,7 +76,8 @@ const SigninForm = ()=>{
         <FaSignInAlt size={25}/>  
         </Button>
         
-        </Container>
+        
+        </CardBody>
         </Card>
         </FormGroup>
         </Form>
