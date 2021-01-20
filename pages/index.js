@@ -30,7 +30,7 @@ export default function Home() {
     title={<h5>Social Handle</h5>}
     icon1={<FaFacebookF size={25}/>}
     icon2={ <FaInstagram size={25}/>}
-    link1={""}
+    link1={"https://www.facebook.com/sevenhillstirupati7"}
     link2={"https://www.instagram.com/sevenhillstirupati/"}
     />
     <hr/>
