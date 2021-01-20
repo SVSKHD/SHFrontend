@@ -3,6 +3,7 @@ import {Form,FormGroup,Input,InputGroup,InputGroupAddon,Label,Container,Button,C
 import {FaSignInAlt} from "react-icons/fa"
 import Router from "next/router"
 import { authenticate, isAuth, signin } from "../../actions/auth";
+import LoginGoogle from "./LoginGoogle";
 
 const SigninComponent =()=>{
 const [values,setValues]=useState({
@@ -90,6 +91,7 @@ return(
 {ShowError()}
 {ShowLoading()}
 {ShowMessage()}
+<LoginGoogle/>
 {SigninForm()}
 </div>
 )

@@ -14,6 +14,7 @@ import {
 import {FaSignInAlt} from "react-icons/fa"
 import Router from "next/router"
 import { authenticate, isAuth, signup } from "../../actions/auth";
+import LoginGoogle from "./LoginGoogle";
 
 
 const SignupComponent = () =>{
@@ -119,6 +120,7 @@ const SignupComponent = () =>{
         <React.Fragment>
             {showError()}
             {showLoading()}
+            <LoginGoogle/>
             {showMessage()}
             {showForm && signupForm()}
         </React.Fragment>

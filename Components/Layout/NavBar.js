@@ -14,7 +14,9 @@ import {
   NavbarText,
   Button,
   ButtonGroup,
-  Container
+  Container,
+  Card,
+  CardBody
 } from 'reactstrap';
 import {APP_NAME} from "../../config"
 import {isAuth, signout} from "../../actions/auth"
@@ -61,23 +63,27 @@ const NavBar = (props) => {
           
           <Nav className="ml-auto" navbar>
 
-
+            {/* signin & signup */}
             {!isAuth() && (
               <React.Fragment>
+              <Card>
               <ButtonGroup  size="sm">
               <Button href="/signup" color="warning"><b>Signup</b></Button>
               <Button href="/signin" color ="success"><b>Signin</b></Button>
               </ButtonGroup>
+              </Card>
               </React.Fragment>
             )}
             
 
             {isAuth() && isAuth().role === 0 && (
             <React.Fragment>
+             <Card>
              <ButtonGroup  size="sm">
-              <Button outline color="light"><b>{isAuth().name}</b></Button>
-              <Button href="/user" outline color ="light">{`${isAuth().name}'s Dashboard`}</Button>
+              <Button outline color="dark"><b>{isAuth().name}</b></Button>
+              <Button href="/user" outline color ="dark">{`${isAuth().name}'s Dashboard`}</Button>
             </ButtonGroup>
+            </Card>
             </React.Fragment>
             )}
 

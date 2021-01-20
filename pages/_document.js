@@ -32,6 +32,7 @@ class MyDocument extends Document {
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
           crossOrigin="anonymous"
           />
+         <link rel="shortcut icon" href="../../static/images/SV.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174931186-1"></script>
         <script dangerouslySetInnerHTML={this.setGoogleTags()}></script>
         </Head>
