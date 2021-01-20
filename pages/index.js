@@ -80,15 +80,16 @@ export default function Home() {
 
      </Col>
      <div>
+       
        <Button
        target="_blank"
        size="lg" 
        outline color="success">
-        <Link  href="/blogs">
-        <FaBook size={30}/>
-        </Link>
-        
+       <Link  href="/blogs">
+       <FaBook size={30}/>
+       </Link>
        </Button>
+     
      </div>
      </Row>
      <hr/>
