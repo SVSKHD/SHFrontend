@@ -26,6 +26,7 @@ import Link from "next/link"
 import Carousel2 from "../Components/Carousel2"
 import {isAuth, signout} from "../actions/auth"
 import  Router  from "next/router"
+import Footer from "../Components/Layout/Footer"
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
   <DesiredCarousel/>
   <hr/>
   <div align="center">
-  <Jumbotron className="indexj" fluid={true}>
+  <Jumbotron className="indexj" fluid>
   <h1 className="display-2" >SevenHills Tirupati</h1>
   <h2 className="display-6">FrontPage of Tirupati & Tirumala</h2>
   </Jumbotron>
@@ -137,11 +138,33 @@ export default function Home() {
   </Row>
   <hr/>
   </Container>
- 
+  
+
   <div>
+  <Container>
+  <Row>
+  
+  <Col>
+  <Type/>
+  </Col>
 
+  <Col>
+  <Card>
+    <CardBody>
+      <div align="center">
+      <img height="150" width="150"
+      src="../../static/images/SV.png"
+      />
+      </div>
+    </CardBody>
+  </Card>
+  </Col>
+
+  </Row>
+  </Container>
   </div>
-
+  <hr/>
+  <Footer/>
   </div>
   )
 }
