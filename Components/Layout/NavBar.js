@@ -78,21 +78,19 @@ const NavBar = (props) => {
 
             {isAuth() && isAuth().role === 0 && (
             <React.Fragment>
-             <Card>
-             <ButtonGroup  size="sm">
-              <Button outline color="dark"><b>{isAuth().name}</b></Button>
-              <Button href="/user" outline color ="dark">{`${isAuth().name}'s Dashboard`}</Button>
-            </ButtonGroup>
-            </Card>
+              <Link href="/user">
+              <Button size="sm" outline color ="light">{`${isAuth().name}'s Dashboard`}</Button>
+              </Link>
             </React.Fragment>
             )}
 
             {isAuth() && isAuth().role === 1 && (
             <React.Fragment>
-             <ButtonGroup  size="sm">
-              <Button outline color="light"><b>{isAuth().name}</b></Button>
-              <Button href="/admin" outline color ="light"><b>{`${isAuth().name}'s Dashboard`}</b></Button>
-            </ButtonGroup>
+             
+              <Link href="/admin">
+              <Button size="sm" color ="light"><b>{`${isAuth().name}'s Dashboard`}</b></Button>
+              </Link>
+           
             </React.Fragment>
             )}
             

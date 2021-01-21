@@ -9,59 +9,57 @@ import {API} from "../../config"
 import {FaTrashAlt,FaEdit} from "react-icons/fa"
 
 const Blogread = ({username}) =>{
-    const [blogs,setBlogs] = useState([])
-    const [message,setMessage] =  useState('')
-    const token = getCookie('token')
+    const [blogs, setBlogs] = useState([]);
+    const [message, setMessage] = useState('');
+    const token = getCookie('token');
 
+    useEffect(() => {
+        loadBlogs();
+    }, []);
 
-    useEffect(()=>{
-        loadBlogs()
-    },[])
-
-    const loadBlogs = () =>{
-        list(username).then(data=>{
-            if(data.error){
-                console.log(data.error)
-            }else{
-                setBlogs(data)
+    const loadBlogs = () => {
+        list().then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                setBlogs(data);
             }
-        })
-    }
+        });
+    };
 
-const deleteBlog = slug =>{
-    removeBlog(slug,token).then(data=>{
-        if(data.error){
-            console.log(data.error)
-        }else{
-            setMessage(data.message)
-            loadBlogs()
+    const deleteBlog = slug => {
+        removeBlog(slug, token).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                setMessage(data.message);
+                loadBlogs();
+            }
+        });
+    };
+
+    const deleteConfirm = slug => {
+        let answer = window.confirm('Are you sure you want to delete your blog?');
+        if (answer) {
+            deleteBlog(slug);
         }
-    })
-} 
+    };
 
-
-const deleteConfirm = (slug) =>{
-let answer = window.confirm("Are you sure you want to delete the blog")
-if(answer){
-    deleteBlog(slug)
-}
-}
-
-const showUpdateButton = blog => {
-    if (isAuth() && isAuth().role === 0) {
-        return (
-            <Link href={`/user/crud/${blog.slug}`}>
-                <Button size="sm" outline color="info"><FaEdit size={25}/></Button>
-            </Link>
-        );
-    } else if (isAuth() && isAuth().role === 1) {
-        return (
-            <Link href={`/admin/crud/${blog.slug}`}>
-                <Button size="sm" outline color="info"><FaEdit size={25}/></Button>
-            </Link>
-        );
-    }
-};
+    const showUpdateButton = blog => {
+        if (isAuth() && isAuth().role === 0) {
+            return (
+                <Link href={`/user/crud/${blog.slug}`}>
+                    <a className="btn btn-sm btn-warning">Update</a>
+                </Link>
+            );
+        } else if (isAuth() && isAuth().role === 1) {
+            return (
+                <Link href={`/admin/crud/${blog.slug}`}>
+                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                </Link>
+            );
+        }
+    };
 
 const ShowAllBlogs = () =>{
     return blogs.map((blog,i)=>{

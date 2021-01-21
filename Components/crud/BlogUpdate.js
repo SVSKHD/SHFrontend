@@ -35,7 +35,7 @@ const [values, setValues] = useState({
     body: ''
 });
 
-const { error, sizeError, success, keywords ,formData, title} = values;
+const { error, success, keywords ,formData, title} = values;
 const token = getCookie("token")
 
 useEffect(()=>{

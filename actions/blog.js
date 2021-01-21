@@ -92,16 +92,14 @@ export const list = (username) => {
         .catch(err => console.log(err));
 };
 
-export const removeBlog = (slug,token) => {
-    
+export const removeBlog = (slug, token) => {
     let deleteBlogEndpoint;
 
-    if(isAuth() && isAuth()===1){
-        deleteBlogEndpoint = `${API}/blog/${slug}`
-    }else if(isAuth() && isAuth().role === 0){
-        createBlogEndpoint = `${API}/user/blog/${slug}`
+    if (isAuth() && isAuth().role === 1) {
+        deleteBlogEndpoint = `${API}/blog/${slug}`;
+    } else if (isAuth() && isAuth().role === 0) {
+        deleteBlogEndpoint = `${API}/user/blog/${slug}`;
     }
-
 
     return fetch(`${deleteBlogEndpoint}`, {
         method: 'DELETE',
@@ -109,11 +107,10 @@ export const removeBlog = (slug,token) => {
             Accept: 'application/json',
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
-        },
-       
+        }
     })
         .then(response => {
-            handleResponse(response)
+            handleResponse(response);
             return response.json();
         })
         .catch(err => console.log(err));
