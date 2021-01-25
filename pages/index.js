@@ -65,7 +65,7 @@ export default function Home() {
     
     <Row>
     
-    <Col className="ISH" xs="12" md="6" lg="3"> 
+    <Col xs="12" md="6" lg="3"> 
     <Card>
       <CardBody>
         <div align="center">
@@ -76,9 +76,10 @@ export default function Home() {
       </div>
       </CardBody>
     </Card>
+    <hr/>
     </Col>
 
-    <Col className="ISH" xs="12" md="6" lg="3">
+    <Col xs="12" md="6" lg="3">
     <Card>
       <CardBody>
         <div align="center">
@@ -90,11 +91,39 @@ export default function Home() {
         </div>
       </CardBody>
     </Card>
+    <hr/>
+    </Col>
+    
+    <Col xs="12" md="6" lg="3">
+    <Card>
+      <CardBody>
+        <div align="center">
+        <Button outline color="dark">
+          <b>Services</b>
+        </Button>
+        </div>
+      </CardBody>
+    </Card>
+    <hr/>
     </Col>
    
-   </Row>
+    <Col xs="12" md="6" lg="3">
+    <Card>
+      <CardBody>
+        <div align="center">
+        <Button href="/contact" outline color="dark">
+          <b>Contact</b>
+        </Button>
+        </div>
+      </CardBody>
+    </Card>
+    <hr/>
     </Col>
 
+
+   </Row>
+    </Col>
+    {/* carousel */}
     <Col>
     <DesiredCarousel/>
     </Col>
