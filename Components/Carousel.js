@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const DesiredCarousel = () => {
   return(
-    <Carousel centerMode={true} stopOnHover={true} >
+    <Carousel autoPlay centerMode={true} stopOnHover={true} >
         <div>
             <img alt="" src="../../static/images/SV3.jpg" />
             <p className="legend">SEVENHILLS TIRUPATI</p>

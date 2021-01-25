@@ -14,6 +14,8 @@ const Seo = ({title , mtitle ,  keywords , canurl , dcontent , ogcontent , ogdes
                 <meta name = "googlebot" content = "index , follow"/>
                 {/* link */}
                 <link rel = "canonical" href = {canurl}/>
+                {/* favicon */}
+                <link rel="icon" href="../../static/images/SV.ico" />
                 
                 {/* og */}
                 <meta property ="og:title" content = {ogcontent}/>

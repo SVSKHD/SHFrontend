@@ -2,7 +2,7 @@ import Typed from "react-typed"
 const Type = () =>{
 return(
     <div className="typed">
-               <Typed
+               <b><Typed
          
                 className="display-6 text-warning"       
                 strings={["Here you can find Stories", 
@@ -17,6 +17,7 @@ return(
                 smartBackspace
                 >
         </Typed>
+        </b>
     </div>
 )
 }

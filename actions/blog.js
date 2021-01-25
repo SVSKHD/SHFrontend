@@ -117,25 +117,25 @@ export const removeBlog = (slug, token) => {
 };
 
 
-export const updateBlog = (blog,token,slug) => {
+export const updateBlog = (blog, token, slug) => {
     let updateBlogEndpoint;
 
-    if(isAuth() && isAuth()===1){
-        updateBlogEndpoint = `${API}/blog/${slug}`
-    }else if(isAuth() && isAuth().role === 0){
-        updateBlogEndpoint = `${API}/user/blog/${slug}`
+    if (isAuth() && isAuth().role === 1) {
+        updateBlogEndpoint = `${API}/blog/${slug}`;
+    } else if (isAuth() && isAuth().role === 0) {
+        updateBlogEndpoint = `${API}/user/blog/${slug}`;
     }
-    
+
     return fetch(`${updateBlogEndpoint}`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
-             Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${token}`
         },
         body: blog
     })
         .then(response => {
-            handleResponse(response)
+            handleResponse(response);
             return response.json();
         })
         .catch(err => console.log(err));

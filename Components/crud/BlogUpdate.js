@@ -1,5 +1,4 @@
 import {useState,useEffect} from "react"
-import Link from "next/link"
 import Router,{withRouter} from "next/router"
 import dynamic from "next/dynamic"
 import {getCookie,isAuth} from "../../actions/auth"
@@ -17,7 +16,7 @@ import {API, DOMAIN} from "../../config"
 
 const BlogUpdate = ({router}) =>{
 
-const [body,setBody] = useState('') 
+const [body, setBody] = useState('');
 
 const [categories, setCategories] = useState([]);
 const [tags, setTags] = useState([]);
@@ -26,17 +25,18 @@ const [checked, setChecked] = useState([]); // categories
 const [checkedTag, setCheckedTag] = useState([]); // tags
 
 const [values, setValues] = useState({
-    title:"",
+    title: '',
     error: '',
     success: '',
     formData: '',
-    keywords:",",
+    keywords: ",",
     title: '',
     body: ''
 });
 
-const { error, success, keywords ,formData, title} = values;
-const token = getCookie("token")
+
+const { error, success, formData, keywords , title } = values;
+const token = getCookie('token');
 
 useEffect(()=>{
     setValues({...values,formData:new FormData()})
@@ -169,7 +169,7 @@ const handleToggle = c => () => {
 const handleTagsToggle = t => () => {
     setValues({ ...values, error: '' });
     // return the first index or -1
-    const clickedTag = checked.indexOf(t);
+    const clickedTag = checkedTag.indexOf(t);
     const all = [...checkedTag];
 
     if (clickedTag === -1) {
