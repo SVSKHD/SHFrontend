@@ -69,10 +69,12 @@ export default function Home() {
     <Card>
       <CardBody>
         <div align="center">
+        {!isAuth() && (
         <ButtonGroup>
           <Button href="/signup" color="warning">Signup</Button>
           <Button href="/signin" color="success">Signin</Button>
         </ButtonGroup>
+        )}
       </div>
       </CardBody>
     </Card>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import {FaShareAlt , FaFacebookF , FaTwitter , FaPinterestP , FaLinkedin} from "react-icons/fa"
+import Link from 'next/link';
 
-const Collapsible = () => (
+const Collapsible = ({LinkF,LinkT,LinkP,LinkI}) => (
   <div>
     <Button 
     size="sm" 
@@ -16,10 +17,10 @@ const Collapsible = () => (
     <UncontrolledCollapse toggler="#toggler">
       <Card>
         <CardBody>
-          <Button size="sm" className="ISH"><FaFacebookF size={30}/></Button>
-          <Button size="sm" className="ISH"><FaTwitter size={30}/></Button>
-          <Button size="sm" className="ISH"><FaPinterestP size={30}/></Button>
-          <Button size="sm" className="ISH"><FaLinkedin size={30}/></Button>
+          <Button href={LinkF} target="_blank" size="sm" className="ISH"><FaFacebookF size={30}/></Button>
+          <Button href={LinkT} target="_blank" size="sm" className="ISH"><FaTwitter size={30}/></Button>
+          <Button href={LinkP} target="_blank" size="sm" className="ISH"><FaPinterestP size={30}/></Button>
+          <Button href={LinkI} target="_blank" size="sm" className="ISH"><FaLinkedin size={30}/></Button>
         </CardBody>
       </Card>
     </UncontrolledCollapse>

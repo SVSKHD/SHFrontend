@@ -65,7 +65,8 @@ const showComments = () =>{
             <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
         </Link>
     ));
-
+ 
+    const Url = `${DOMAIN}/blogs/${query.slug}`
 return(
     <React.Fragment>
         <div>
@@ -100,7 +101,12 @@ return(
             
             <Col xs="12" md="2" lg="2">
             <br/>
-            <Collapsible/>
+            <Collapsible
+            LinkF={`https://www.facebook.com/sharer/sharer.php?u=${Url}`}
+            LinkT={`http://www.twitter.com/share?url=${Url}`}
+            LinkP={`http://pinterest.com/pin/create/button/?url=${Url}`}
+            LinkI={`https://www.linkedin.com/cws/share?url=${Url}`}
+            />
             <br/>
             <Card>
             <CardBody>
