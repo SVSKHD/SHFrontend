@@ -76,6 +76,13 @@ export default function Home() {
         </ButtonGroup>
         )}
       </div>
+      
+      <div align="center">
+        {isAuth() && (
+          <Button outline color="dark">{isAuth().name}</Button>
+        )}
+      </div>
+
       </CardBody>
     </Card>
     <hr/>
