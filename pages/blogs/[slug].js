@@ -87,7 +87,7 @@ return(
             </div>
             <br/>
             <Container>
-            <h1 className="display-3">{blog.title}</h1>
+            <h1 className="display-5">{blog.title}</h1>
             <br/>
             <Row>
             <Col xs="12" md="10" lg="10">

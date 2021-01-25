@@ -87,7 +87,7 @@ export default function Home() {
           <Button href="https://www.facebook.com/sevenhillstirupati7" outline color="primary"><FaFacebookF size={20}/></Button>
           <Button outline color="danger"><FaYoutube size={20}/></Button>
         </ButtonGroup>
-       </div>
+        </div>
       </CardBody>
     </Card>
     </Col>
