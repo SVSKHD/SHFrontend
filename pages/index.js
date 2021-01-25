@@ -62,7 +62,37 @@ export default function Home() {
         Explore <FaCompass className="load" size={30} />
       </Button>
     </div>
+    
+    <Row>
+    
+    <Col className="ISH" xs="12" md="6" lg="3"> 
+    <Card>
+      <CardBody>
+        <div align="center">
+        <ButtonGroup>
+          <Button href="/signup" color="warning">Signup</Button>
+          <Button href="/signin" color="success">Signin</Button>
+        </ButtonGroup>
+      </div>
+      </CardBody>
+    </Card>
+    </Col>
+
+    <Col className="ISH" xs="12" md="6" lg="3">
+    <Card>
+      <CardBody>
+        <div align="center">
+        <ButtonGroup>
+          <Button href="https://www.instagram.com/sevenhillstirupati/" outline color="dark"><FaInstagram size={20}/></Button>
+          <Button href="https://www.facebook.com/sevenhillstirupati7" outline color="primary"><FaFacebookF size={20}/></Button>
+          <Button outline color="danger"><FaYoutube size={20}/></Button>
+        </ButtonGroup>
+       </div>
+      </CardBody>
+    </Card>
+    </Col>
    
+   </Row>
     </Col>
 
     <Col>
