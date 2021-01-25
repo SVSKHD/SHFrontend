@@ -35,7 +35,7 @@ const Inav = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/Blogs">Blogs</NavLink>
+              <NavLink href="/blogs">Blogs</NavLink>
             </NavItem>
             
             

@@ -43,6 +43,7 @@ export default function Home() {
   keywords={`SevenHills Tirupati , SevenHillsTirupati, Tirumala Tirupati Balaji , Govinda`}
   />
   <Container fluid={true}>
+  
   <Row>
     <Col>
     <div className="IN">
