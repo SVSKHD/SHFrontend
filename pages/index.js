@@ -16,7 +16,10 @@ import {
   FaBook,
   FaCompass,
   FaYoutube,
-  FaUserAlt
+  FaUserAlt,
+  FaBlog,
+  FaSpinner,
+  FaGopuram
 } from "react-icons/fa"
 import IndexCard from "../Components/IndexCard"
 import DesiredCarousel from "../Components/Carousel"
@@ -133,7 +136,18 @@ export default function Home() {
     </CardBody>
     </Card>
     </Col>
+
+
     <Col>
+    <Card>
+      <CardBody>
+        <ButtonGroup size="lg">
+          <Button href="/blogs" outline color="dark"><FaCompass size={30} className="load"/></Button>
+          <Button href="/blogs" outline color="dark"><FaSpinner className="load" size={30}/></Button>
+          <Button href="/blogs" outline color="dark"><FaGopuram  size={30}/></Button>
+        </ButtonGroup>
+      </CardBody>
+    </Card>
     </Col>
   </Row>
   <hr/>

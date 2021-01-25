@@ -39,6 +39,13 @@ const AdminIndex = () =>{
                      </Link>
                 </ListGroupItem>
 
+
+                <ListGroupItem>
+                     <Link href="/user/update">
+                        Update Profile
+                     </Link>
+                </ListGroupItem>
+
                 </ListGroup>
                 </Col>
                 <Col>
