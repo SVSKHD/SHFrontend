@@ -79,7 +79,7 @@ export default function Home() {
       
       <div align="center">
         {isAuth() && (
-          <Button outline color="dark">{isAuth().name}</Button>
+          <Button color="dark">{isAuth().name}</Button>
         )}
       </div>
 
