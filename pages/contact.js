@@ -4,7 +4,7 @@ import SigninComponent from "../Components/auth/SigninComponent"
 import SignupComponent from "../Components/auth/SignupComponents"
 import Slider from "../Components/Carousel"
 import ContactForm from "../Components/form/contactform"
-
+import Seo from "../Components/seo"
 
 const Contact = () =>{
 return(
