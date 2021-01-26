@@ -36,6 +36,9 @@ const Seo = ({title , mtitle ,  keywords , canurl , dcontent , ogcontent , ogdes
 
                 {/* analytics and id */}
                 <meta name = "fb:app_id" content={FBID}/>
+                {/* verification */}
+                <meta name="google-site-verification" content="3i45BskIaPwVJUqTqZZWPUPq5Vdysf1SSuUn4Fy0A0A" />
+                <meta name="yandex-verification" content="7f3625bf938da52c" />
             </Head>
         </div>
     )

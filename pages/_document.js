@@ -32,7 +32,7 @@ class MyDocument extends Document {
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
           crossOrigin="anonymous"
           />
-          <meta name="google-site-verification" content="3i45BskIaPwVJUqTqZZWPUPq5Vdysf1SSuUn4Fy0A0A" />
+          
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174931186-1"></script>
           <link rel="shortcut icon" href="../../static/images/SV.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
