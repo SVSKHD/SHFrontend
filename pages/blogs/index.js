@@ -8,6 +8,7 @@ import Link from "next/link"
 import {withRouter} from "next/router"
 import BlogCard from "../../Components/blog/Blogcard"
 import {FaCircleNotch} from "react-icons/fa"
+import Seo from "../../Components/seo"
 
 
 
@@ -95,6 +96,15 @@ const showLoadedBlogs = () => {
     
     return(
        <div>
+           <Seo
+            title={"SevenHills Tirupati Blog is here | All about Tirupati and Tirumala "}
+            dcontent={`SevenHills Tirupati is Blog for every one and it is a great opensource from Tirrpati and tirumala, 
+            like it and share it and get featured.`}
+            keywords={`Tirupati , 
+            FrontFace of Tirupati and Tirmula , 
+            Tirumala Tirupati Balaji , 
+            Govinda , Srinivas , Venkatesawara Swamy`}
+            />
         <Layout>
             <h1>Blogs and Stories List</h1>
             <hr/>

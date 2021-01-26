@@ -28,7 +28,7 @@ const Footer = ({blog}) => {
            <img height="150" width="150"
            className="rounded-circle img-thumbnail border-warning "
            align="center"
-           src="../../static/images/SV.png"
+           src="../../static/images/SV.jpg"
            />
            </div>
           </Col>
