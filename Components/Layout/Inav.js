@@ -14,6 +14,7 @@ import {
 import {isAuth, signout} from "../../actions/auth"
 import Link from "next/link"
 import  Router  from 'next/router';
+import { FaGopuram } from 'react-icons/fa';
 
 const Inav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,13 @@ const Inav = (props) => {
            />
         </NavbarBrand>
 
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler >
+        <Button onClick={toggle} outline color="light">
+        <FaGopuram size={30}/>
+        </Button>
+        </NavbarToggler>
+
+        
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
