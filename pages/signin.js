@@ -19,12 +19,8 @@ const Signup = ({router}) =>{
 
     return(
     <Layout>
-        <Row>
-        <Col>
         <Container>
         <Row>
-        <Col>
-        </Col>
         <Col xs="12" sm="12" md="6" lg="6">
         <div className="signin">
         <h1 className="display-5">Singin here</h1>
@@ -35,9 +31,9 @@ const Signup = ({router}) =>{
         </div>
         </Col>
        
-        </Row>
-        </Container>
-        </Col>
+       
+       
+       
 
         <Col xs="12" sm="12" md="6" lg="6" >
         <div className="authslider">
@@ -46,6 +42,7 @@ const Signup = ({router}) =>{
         </Col>
 
         </Row>
+        </Container>
     </Layout>
 )
 }

@@ -6,19 +6,9 @@ import DesiredCarousel from "../Components/Carousel"
 const Signup = () =>{
 return(
     <Layout>
+        <Container>
         <Row>
         
-        <Container>
-        <Col xs="12" lg="6" md="6" sm="12">
-        <div className="authslider">
-        <DesiredCarousel/>
-        </div>
-        </Col>
-        </Container>
-
-        <Col>
-        <Container>
-        <Row>
         <Col xs="12" lg="6" md="6" sm="12">
         <div className="signin">
         <h1 className="display-5">Signup here</h1>
@@ -27,10 +17,16 @@ return(
         </div>
         </Col>
         
+        <Col xs="12" lg="6" md="6" sm="12">
+        <div className="authslider">
+        <DesiredCarousel/>
+        </div>
+        </Col>
+       
+        
+      
         </Row>
         </Container>
-        </Col>
-        </Row>
     </Layout>
 )
 }
