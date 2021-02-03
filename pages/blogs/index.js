@@ -99,7 +99,7 @@ const showLoadedBlogs = () => {
            <Seo
             title={"SevenHills Tirupati Blog is here | All about Tirupati and Tirumala "}
             dcontent={`SevenHills Tirupati is Blog for every one and it is a great opensource from Tirrpati and tirumala, 
-            like it and share it and get featured.`}
+            only genuine stories of history is here.`}
             keywords={`Tirupati , 
             FrontFace of Tirupati and Tirmula , 
             Tirumala Tirupati Balaji , 
