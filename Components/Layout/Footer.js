@@ -19,8 +19,10 @@ const Footer = ({blog}) => {
         <Container fluid>
           <Row>
           <Col xs="12" md="4">
+          <div className="FT">
           <h1 className="display-4">{APP_NAME}</h1>
           <h4 className="display-7">Front Page of Tirupati & Tirumala</h4> 
+          </div>
           </Col>
          
           <Col xs="12" md="4">
@@ -45,7 +47,7 @@ const Footer = ({blog}) => {
 
           <Row>
           <Col xs="12" md="2">
-          <h5>Our PortFolio</h5>
+          <h5>Our Social handle</h5>
           
              <Button 
              className="ISH" 

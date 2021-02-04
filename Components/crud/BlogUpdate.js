@@ -97,24 +97,23 @@ const initTags = () => {
     });
 };
 
-const findOutCategory = c =>{
-    const result = checked.indexOf(c)
-    if(result !== -1){
-       return true
-    }else{
-        return false
-    }
-}
+ const findOutCategory = c => {
+        const result = checked.indexOf(c);
+        if (result !== -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
-
-const findOutTag = t =>{
-    const result = checkedTag.indexOf(t)
-    if(result !== -1){
-       return true
-    }else{
-        return false
-    }
-}
+    const findOutTag = t => {
+        const result = checkedTag.indexOf(t);
+        if (result !== -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
 const showCategories = () => {
     return (
@@ -145,10 +144,10 @@ const showTags = () => {
     );
 };
 
-const handleBody = e =>{
-    setBody(e)
-    formData.set('body',e)
-}  
+const handleBody = e => {
+    setBody(e);
+    formData.set('body', e);
+};
 
 const handleToggle = c => () => {
     setValues({ ...values, error: '' });

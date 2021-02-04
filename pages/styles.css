@@ -1,3 +1,4 @@
+
 .Navbar{
 border-radius: 0.5rem;
 color: azure;
@@ -57,6 +58,9 @@ animation: gradient 15s ease infinite;
   background-position: 0% 50%;
 }
 }
+.FT{
+  font-family: Pacifico;
+}
 
 
 /* indexpage */
@@ -79,6 +83,11 @@ font-family: Pacifico;
 }
 .IHSUB{
   color: #051937;
+}
+.SPG{
+  padding: 1rem;
+  color: #051937;
+
 }
 .navbar{
 border-radius: 0.5rem;

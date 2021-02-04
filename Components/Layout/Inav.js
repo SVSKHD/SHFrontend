@@ -71,19 +71,18 @@ const Inav = (props) => {
             </React.Fragment>
             )}
 
-            {isAuth() && isAuth().role === 0 && (
-                    
-                    <React.Fragment>
-                      <Link href="/user">
-                      <Button color ="light"><b>{`${isAuth().name}'s Dashboard`}</b></Button>
-                      </Link>
-                    </React.Fragment>
+           {isAuth() && isAuth().role === 0 && (
+            <React.Fragment>
+              <Link href="/user">
+              <Button color ="light" >{`${isAuth().name}'s Dashboard`}</Button>
+              </Link>
+            </React.Fragment>
             )}
 
             {isAuth() && isAuth().role === 1 && (
                     
                     <React.Fragment>
-                      <Link href="/user">
+                      <Link href="/admin">
                       <Button color ="light"><b>{`${isAuth().name}'s Dashboard`}</b></Button>
                       </Link>
                     </React.Fragment>

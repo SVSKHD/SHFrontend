@@ -2,6 +2,7 @@ import Layout from "../../Components/Layout/Layout"
 import {Container, Row, Col, ListGroup,ListGroupItem } from "reactstrap"
 import Link from "next/link"
 import Admin from "../../Components/auth/Admin"
+import { Button } from "reactstrap"
 const AdminIndex = () =>{
     return(
       <div>
@@ -9,11 +10,14 @@ const AdminIndex = () =>{
        <Layout>
         
         <div className="AdminDashboard">
-            <h1>Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
+        
         </div>
         <Container>
+        <hr/>
             <Row>
-                <Col>
+                <Col xs="12" sm="12" lg="3" md="3">
+
                 <ListGroup>
                 <ListGroupItem>
                     <Link href="/admin/crud/category-tag">
@@ -48,10 +52,9 @@ const AdminIndex = () =>{
 
                 </ListGroup>
                 </Col>
+
                 <Col>
-                
-                </Col>
-                <Col>
+                <Button href="">Profile</Button>
                 </Col>
             </Row>
         </Container>
