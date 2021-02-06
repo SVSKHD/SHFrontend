@@ -4,7 +4,7 @@ import Layout from "../../Components/Layout/Layout"
 import moment from "moment"
 import { userPublicProfile } from "../../actions/user"
 import Link from "next/link"
-import {API} from "../../config"
+import {API , APP_NAME} from "../../config"
 import renderHTML from 'react-render-html';
 import Collapsible from "../../Components/Collapsible"
 import BlogCard from "../../Components/blog/Blogcard"
@@ -12,6 +12,7 @@ import RelatedCard from "../../Components/blog/relatedCard"
 import SmallCard from "../../Components/blog/SmallCard"
 import { singleBlog } from "../../actions/blog"
 import ContactForm from "../../Components/form/contactform"
+import Seo from "../../Components/seo"
 
 const UserProfile = ({user,blogs,query}) =>{
     
@@ -34,7 +35,11 @@ const UserProfile = ({user,blogs,query}) =>{
     
     return(
      <div>
+         <Seo
+         title={`${user.name} | ${APP_NAME}`}
+         />
          <Layout>
+            
              <Container>
              <div className="row">
                         <div className="col-md-12">

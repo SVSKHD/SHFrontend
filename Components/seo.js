@@ -11,7 +11,9 @@ const Seo = ({title , mtitle ,  keywords , canurl , dcontent , ogcontent , ogdes
                 <meta name ="keywords" content={keywords}/>
                 <meta name = "robots" content = "index , follow"/>
                 <meta name ="image" content={ogimg}/>
+                {/* seo verification */}
                 <meta name = "googlebot" content = "index , follow"/>
+                <meta name="yandex-verification" content="0143e918faae2a3d" />
                 {/* link */}
                 <link rel = "canonical" href = {canurl}/>
                 {/* favicon */}

@@ -3,7 +3,7 @@ import {withRouter} from "next/router"
 import {Container,Row,Col,Card,Button,CardBody } from "reactstrap"
 import SigninComponent from "../Components/auth/SigninComponent"
 import Slider from "../Components/Carousel"
-
+import Seo from "../Components/seo"
 
 
 
@@ -20,6 +20,14 @@ const Signup = ({router}) =>{
 
     return(
     <Layout>
+
+        <Seo
+        title={"Signin in To the Top Blog of Tirupati & Tirumala | SevenHillsTirupati"}
+        dcontent={`SevenHills Tirupati Signin page open source to many bloggers from
+         tirupati and Tirumala and also a feature to upload their showcase in the powerful web platform`}
+        keywords={`SevenHillsTirupati , Signin , Tirupati Top Blogs, SevenHillsTirupati Signin page `}
+        />
+
         <Container>
         <div align="center">
         <div className="INH">
