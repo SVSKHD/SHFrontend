@@ -2,6 +2,9 @@ import Layout from "../../Components/Layout/Layout"
 import {Container, Row, Col, Card, CardBody } from "reactstrap"
 import Link from "next/link"
 import Private from "../../Components/auth/Private"
+
+
+
 const UserIndex = () =>{
     return(
       <React.Fragment>
