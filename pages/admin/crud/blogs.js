@@ -9,7 +9,10 @@ const Blog = () =>{
             <Layout>
                 <Admin>
                 <div>
+                <Container>
                 <h1>Manage Blogs</h1>
+                <hr/>
+                </Container>
                 </div>
                 <div>
                    <Blogread/>

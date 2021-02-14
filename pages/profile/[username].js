@@ -1,4 +1,4 @@
-import { Button, Container , Card , CardBody , Row , Col } from "reactstrap"
+import { Container , Card , CardBody , Row , Col , Button , ButtonGroup} from "reactstrap"
 import {FaAddressCard} from "react-icons/fa"
 import Layout from "../../Components/Layout/Layout"
 import moment from "moment"
@@ -25,6 +25,8 @@ const UserProfile = ({user,blogs,query}) =>{
                         <Link href={`/blogs/${blog.slug}`}>
                         <a className="lead">{blog.title}</a>
                         </Link>
+                        <hr/>
+                        <Button href="/admin/crud/blogs" outline color="dark">Update Blogs</Button>
                         </CardBody>
                     </Card>
                     
@@ -37,6 +39,8 @@ const UserProfile = ({user,blogs,query}) =>{
      <div>
          <Seo
          title={`${user.name} | ${APP_NAME}`}
+         ogimg={`${API}/user/photo/${user.username}`}
+        //  canurl={}
          />
          <Layout>
             
@@ -49,6 +53,7 @@ const UserProfile = ({user,blogs,query}) =>{
                                         <div className="col-md-8">
                                             <h5>{user.name}</h5>
                                             <p className="text-muted">Joined {moment(user.createdAt).fromNow()}</p>
+                                            <Button href="/user/update" outline color="dark">Update Profile</Button>
                                         </div>
                                         <div className="col-md-4">
                                             <img
@@ -66,12 +71,12 @@ const UserProfile = ({user,blogs,query}) =>{
                  <hr/>
 
                  <Row>
-                     <Col>
+                     <Col xs="12" sm="12" lg="6" md="6">
                      <Card body inverse color="info">
                      <CardBody>
                      <h5>Recent Blogs by  {user.name}</h5>
                      {showUserBlogs()}
-                     <Button outline color="light"></Button>
+                     
                      </CardBody>
                      
                      </Card>

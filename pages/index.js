@@ -35,11 +35,13 @@ import Inav from "../Components/Layout/Inav"
 
 export default function Home() {
   return (
-  <div >
+  <div className="indexbackground">
   <Seo
   title={"SevenHills Tirupati | FrontPage of Tirupati and Tirumala"}
+  mtitle={"SevenHills Tirupati | FrontPage of Tirupati and Tirumala"}
   dcontent={`Stay tuned to regular news of the Tirupati and Tirumala , 
   The best services and information are here`}
+  canurl={`https://sevenhillstirupati.com`}
   keywords={`SevenHills Tirupati , SevenHillsTirupati, Tirumala Tirupati Balaji , Govinda`}
   />
   <Container fluid={true}>
@@ -48,6 +50,7 @@ export default function Home() {
     <Col>
     <div className="IN">
     <Inav/>
+    <div align="center">
     <div className="INH">
     <h1 className="IHT">SevenHills Tirupati</h1>
     <div className="IHSUB">
@@ -55,86 +58,71 @@ export default function Home() {
     </div>
     </div>
     </div>
+    </div>
     {/* cards */}
     
     <div align="center" className="IN">
       <Button href="/blogs" outline color="dark">
-        Explore <FaCompass className="load" size={30} />
+        <b>Explore</b> 
+        <FaCompass className="load" size={30} />
       </Button>
     </div>
-    
+    <hr/>
     <Row>
     
-    <Col xs="12" md="6" lg="3"> 
-    <Card>
-      <CardBody>
-        <div align="center">
-        {!isAuth() && (
-        <ButtonGroup>
-          <Button href="/signup" color="warning">Signup</Button>
-          <Button href="/signin" color="success">Signin</Button>
-        </ButtonGroup>
-        )}
-      </div>
+    
+    <div>
+    
+    <Row>
       
-      <div align="center">
-        {isAuth() && (
-          <Button color="dark">{isAuth().name}</Button>
-        )}
-      </div>
-
-      </CardBody>
-    </Card>
-    <hr/>
-    </Col>
-
-    <Col xs="12" md="6" lg="3">
     <Card>
-      <CardBody>
-        <div align="center">
-        <ButtonGroup>
+    <CardBody>
+    <Row>
+    <Col xs="12" sm="12" lg="6" md="6">
+    <div align="center">
+        <ButtonGroup className="ISH">
           <Button href="https://www.instagram.com/sevenhillstirupati/" outline color="dark"><FaInstagram size={20}/></Button>
           <Button href="https://www.facebook.com/sevenhillstirupati7" outline color="primary"><FaFacebookF size={20}/></Button>
           <Button outline color="danger"><FaYoutube size={20}/></Button>
         </ButtonGroup>
-        </div>
-      </CardBody>
-    </Card>
-    <hr/>
-    </Col>
-    
-    <Col xs="12" md="6" lg="3">
-    <Card>
-      <CardBody>
-        <div align="center">
-        <Button outline color="dark">
-          <b>Services</b>
-        </Button>
-        </div>
-      </CardBody>
-    </Card>
-    <hr/>
-    </Col>
-   
-    <Col xs="12" md="6" lg="3">
-    <Card>
-      <CardBody>
-        <div align="center">
-        <Button href="/contact" outline color="dark">
-          <b>Contact</b>
-        </Button>
-        </div>
-      </CardBody>
-    </Card>
-    <hr/>
+    </div>
     </Col>
 
+    <Col xs="12" sm="12" lg="6" md="6">
+    <div align="center">
+    <ButtonGroup className="ISH"> 
+        <Button outline color="dark"><b>Services</b></Button>
+        <Button href="/contact" outline color="dark"><b>Contact</b></Button>
+    </ButtonGroup>
+    </div>
+    </Col>
+    </Row>
+    </CardBody>
+    </Card>
+  
+    
+    
+    
+    
+   </Row>
+    
+   
+    
+   
+   
+   
+    </div>
+  
 
    </Row>
     </Col>
     {/* carousel */}
     <Col>
+    <Card>
+    <CardBody>
     <DesiredCarousel/>
+    </CardBody>
+    </Card>
     </Col>
   </Row>
 

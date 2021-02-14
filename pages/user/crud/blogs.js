@@ -11,8 +11,10 @@ const Blog = () =>{
         <Layout>
             <Private>
             <div>
-                <h2>Manage Blogs</h2>
-                <hr/>
+            <Container>
+            <h2>Manage Blogs</h2>
+            <hr/>
+            </Container>
             </div>
             <div>
                 <Blogread username={username}/>
