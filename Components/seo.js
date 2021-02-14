@@ -2,9 +2,28 @@ import Head from "next/head"
 import {APP_NAME, FBID} from "../config"
 
 const Seo = ({title , mtitle ,  keywords , canurl , dcontent , ogcontent , ogdesc , ogurl , ogimg}) =>{
+    
+ 
     return(
         <div>
             <Head>
+            {/* schema */}
+
+            <script type="application/ld+json">
+            {`
+            "@context": "https://schema.org",
+            "@type": "NGO",
+            "name": "Sevenhills Tirupati",
+            "alternateName": "SevenHillsTirupati",
+            "url": "https://sevenhillstirupati.com/",
+            "logo": "https://sevenhillstirupati.com/static/images/SV.jpg",
+            "sameAs": [
+                "https://www.instagram.com/sevenhillstirupati/",
+                "https://www.facebook.com/sevenhillstirupati7"
+            ]
+            `}
+            </script>
+              
                 <title>{title}</title>
                 <meta name="title" content={mtitle}/>
                 <meta name ="description" content = {dcontent}/>

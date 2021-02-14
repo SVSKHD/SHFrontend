@@ -39,6 +39,8 @@ const UserProfile = ({user,blogs,query}) =>{
      <div>
          <Seo
          title={`${user.name} | ${APP_NAME}`}
+         mtitle={`${user.name} | ${APP_NAME}`}
+         canurl={`https://sevenhillstirupati.com/${user.username}`}
          ogimg={`${API}/user/photo/${user.username}`}
         //  canurl={}
          />
