@@ -10,8 +10,9 @@ const create = () =>{
             <React.Fragment>
             <Layout>
                 <Private>
-                
+                <Container>
                 <h1>Create New Blog</h1>
+                </Container>
                 <hr/>
                 
                 <div>

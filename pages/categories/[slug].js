@@ -30,7 +30,7 @@ const Category = ({category, blogs , query}) =>{
            
            <Layout>
             <Container>
-                <h1 className="display-3">Category : {category.name}</h1>
+                <h1 className="display-5"><b>Category : {category.name}</b></h1>
                 <hr/>
                 <Row>
                 {blogs.map((b,i)=>

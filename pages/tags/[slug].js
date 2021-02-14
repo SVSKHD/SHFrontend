@@ -33,7 +33,7 @@ const Tag = ({tag,blogs,query}) =>{
 
             <Layout>
             <Container>
-                <h1 className="display-3">Tag:{tag.name}</h1>
+                <h1 className="display-5"><b>Tag:{tag.name}</b></h1>
                 <hr/>
                 <Row>
                 {blogs.map((b,i)=>

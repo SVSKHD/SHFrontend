@@ -6,13 +6,21 @@ import {getCookie,isAuth} from "../../actions/auth"
 import {getAllCategories} from "../../actions/category"
 import {getTags} from "../../actions/tag"
 import {createBlog} from "../../actions/blog"
-import {Form,FormGroup,Input,Label,Row,Col,Container, Button,Toast,ToastBody} from "reactstrap"
+import {
+    Row,
+    Col,
+    Container, 
+    Card, 
+    CardBody ,
+    Button,
+    Toast,
+    ToastBody
+} from "reactstrap"
 // editor
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import '../../node_modules/react-quill/dist/quill.snow.css';
 import { QuillModules, QuillFormats } from '../helpers/quill';
 import {FaHeading,FaSortAlphaUp,FaAlignJustify,FaUpload,FaFileUpload, FaTimesCircle, FaCheckCircle} from "react-icons/fa"
-
 const BlogCreate = ({router}) =>{
 
     const blogFromLS = () => {
@@ -201,9 +209,19 @@ const BlogCreate = ({router}) =>{
                     </Col>
                     </Row>
                 </div>
+           
             <form onSubmit={publishBlog}>
+                <div align="right">
+                    <Button outline color="success" size="sm" type="submit">
+                        <FaUpload size={20}/> <b>Publish</b>
+                    </Button>
+                    <hr/>
+                </div>
+                <Card>
+                <CardBody>
+                
                 <div className="form-group">
-                    <label><FaHeading size={35}/></label>
+                    <label><FaHeading size={20}/> <b>Title</b></label>
                     <input 
                     type="text" 
                     className="form-control" 
@@ -213,7 +231,7 @@ const BlogCreate = ({router}) =>{
                 </div>
 
                 <div className="form-group">
-                    <label><FaSortAlphaUp size={35}/></label>
+                    <label><FaSortAlphaUp size={20}/> <b>Keywords</b></label>
                     <input 
                     type="text" 
                     className="form-control" 
@@ -226,7 +244,7 @@ const BlogCreate = ({router}) =>{
                     
                     <label 
                     for="formFileMultiple" 
-                    className="form-label"><FaUpload size={35}/> <h5> Featured Image</h5>
+                    className="form-label"><FaUpload size={20}/> <b>Featured Image</b>
                     </label>
                     <br/>
                     <small className="text-muted">Max size: 1mb</small>
@@ -242,7 +260,7 @@ const BlogCreate = ({router}) =>{
 
 
                 <div className="form-group">
-                <label><FaAlignJustify size={35}/></label>
+                <label><FaAlignJustify size={20}/> <b>Content</b> </label>
                     <ReactQuill
                         modules={QuillModules}
                         formats={QuillFormats}
@@ -254,15 +272,21 @@ const BlogCreate = ({router}) =>{
 
                 <div>
                     <Button outline color="success" size="sm" type="submit">
-                        <FaUpload size={35}/>
+                        <FaUpload size={20}/> <b>publish</b>
                     </Button>
                 </div>
+            </CardBody>
+            </Card>
             </form>
+            
             </div>
         );
     };
 
     return (
+        <Container fluid={true}>
+        <Card>
+        <CardBody >
         <div className="container-fluid pb-5">
             <div className="row">
                 <div className="col-md-8">
@@ -270,25 +294,35 @@ const BlogCreate = ({router}) =>{
                 </div>
 
                 <div className="col-md-4">
-                    <div>
-                    <div>
                     
-                    </div> 
-                    </div>
+                    
+                    
+                    <Card>
+                    <CardBody>
                     <div>
-                        <h5>Categories</h5>
+                   
+                        <h5><b>Categories</b></h5>
                         <hr />
 
                         <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showCategories()}</ul>
                     </div>
                     <div>
-                        <h5>Tags</h5>
+                        <h5><b>Tags</b></h5>
                         <hr />
                         <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
+                    
                     </div>
+                    </CardBody>
+                    </Card>
+
+
+
                 </div>
             </div>
         </div>
+    </CardBody>
+    </Card>
+    </Container>
     );
 }
 

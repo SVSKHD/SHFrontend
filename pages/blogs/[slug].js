@@ -83,9 +83,15 @@ return(
             ogimg={`${API}/blog/photo/${blog.slug}`}
             />
             <Layout>
-            <div >
+
+            
+            <div >   
             <img className="blogimage" src={`${API}/blog/photo/${blog.slug}`} alt={blog.title}/>
             </div>
+             
+            
+
+
             <br/>
             <Container>
             <h1 className="display-5">{blog.title}</h1>
@@ -132,7 +138,17 @@ return(
           
             </Col>
             </Row>
+            <div align="center">
+            <div className="INH">
+            <h3 className="IHT">SevenHills Tirupati</h3>
+            <div className="IHSUB">
+            <h4>Stay Connected to us</h4>
+            </div>
+            </div>
+            </div>
             
+
+
             </Container>
 
              <br/>

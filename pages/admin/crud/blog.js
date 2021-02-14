@@ -10,7 +10,11 @@ const Blog = () =>{
             <Layout>
                 <Admin>
                 <div>
+                <Container>
                 <h1>Create Post here</h1>
+                
+                </Container>
+                <hr/>
                 </div>
                 <div>
                     <BlogCreate/>
