@@ -43,6 +43,11 @@ export default function Home() {
   The best services and information are here`}
   canurl={`https://sevenhillstirupati.com`}
   keywords={`SevenHills Tirupati , SevenHillsTirupati, Tirumala Tirupati Balaji , Govinda`}
+  ogcontent={"SevenHills Tirupati | FrontPage of Tirupati and Tirumala"}
+  ogdesc={`Stay tuned to regular news of the Tirupati and Tirumala , 
+  The best services and information are here`}
+  ogimg={"https://sevenhillstirupati.com/static/images/SV.jpg"}
+  ogurl={"https://sevenhillstirupati.com"}
   />
   <Container fluid={true}>
   

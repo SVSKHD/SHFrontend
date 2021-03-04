@@ -2,27 +2,19 @@ import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Button,
   ButtonGroup,
   Container,
   Card,
-  CardBody
 } from 'reactstrap';
 import {APP_NAME} from "../../config"
 import {isAuth, signout} from "../../actions/auth"
 import Link from "next/link"
 import { Router } from 'next/router';
-import {FaEdit , FaAddressBook} from "react-icons/fa"
+import {FaEdit , FaAddressBook , FaGopuram} from "react-icons/fa"
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +26,7 @@ const NavBar = (props) => {
       <Container>
        <Navbar dark expand="md">
        <NavbarBrand href="/">{APP_NAME}</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <Button outline color="light" onClick={toggle} ><FaGopuram size={30}/></Button>
         <Collapse isOpen={isOpen} navbar>
          
          
@@ -79,7 +71,19 @@ const NavBar = (props) => {
             {isAuth() && isAuth().role === 0 && (
             <React.Fragment>
               <Link href="/user">
-              <Button size="sm" outline color ="light">{`${isAuth().name}'s Dashboard`}</Button>
+              <ButtonGroup>
+              <Button 
+              size="sm" 
+              outline color ="light"
+              >
+                <b>{`${isAuth().name}'s Dashboard`}</b>
+              </Button>
+              <Button 
+              onClick={() => signout(() => Router.replace(`/signin`))} 
+              color="danger">
+              <b>Signout</b>
+              </Button>              
+              </ButtonGroup>
               </Link>
             </React.Fragment>
             )}
@@ -88,24 +92,25 @@ const NavBar = (props) => {
             <React.Fragment>
              
               <Link href="/admin">
-              <Button size="sm" color ="light"><b>{`${isAuth().name}'s Dashboard`}</b></Button>
+              <ButtonGroup>
+              <Button 
+              size="sm" 
+              color ="light"
+              >
+                <b>
+                  {`${isAuth().name}'s Dashboard`}
+                </b>
+              </Button>
+              <Button 
+              onClick={() => signout(() => Router.replace(`/signin`))} 
+              color="danger">
+              <b>Signout</b>
+              </Button> 
+              </ButtonGroup>
               </Link>
            
             </React.Fragment>
             )}
-            
-
-            {isAuth() && (
-              <Button onClick={() => signout(() => Router.replace(`/signin`))} color="danger" size="sm">Signout</Button>
-            )}
-           
-           
-          
-            
-         
-
-   
-            
           </Nav>
   
         </Collapse>
