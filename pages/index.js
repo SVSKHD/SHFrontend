@@ -59,6 +59,7 @@ export default function Home() {
     <div align="center">
     <div className="INH">
     <h1 className="IHT">SevenHills Tirupati</h1>
+    <br/>
     <div className="IHSUB">
     <h2>Front page of Tirupati and Tirumala</h2>
     </div>

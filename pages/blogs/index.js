@@ -106,6 +106,7 @@ const showLoadedBlogs = () => {
             Govinda , Srinivas , Venkatesawara Swamy`}
             />
         <Layout>
+            <Container fluid>
             <h1>Blogs and Stories List</h1>
             <hr/>
             <Container>
@@ -131,6 +132,7 @@ const showLoadedBlogs = () => {
              </Col>
              </Row>
              </div>
+            </Container>
             </Container>
         </Layout>
        </div>
