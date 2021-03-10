@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Container, Row, Col} from 'reactstrap';
+import { Jumbotron, Container, Row, Col , ButtonGroup} from 'reactstrap';
 import {APP_NAME} from "../../config"
 import FooterSearch from '../blog/footersearch';
 import {Card , CardBody , Button} from "reactstrap"
@@ -18,39 +18,28 @@ const Footer = ({blog}) => {
       <Jumbotron className="Footer" fluid>
         <Container fluid>
           <Row>
-          <Col xs="12" md="4">
+          <Col xs="12" md="6">
           <div className="FT">
-          <h1 className="display-4">{APP_NAME}</h1>
-          <h4 className="display-7">Front Page of Tirupati & Tirumala</h4> 
-          </div>
-          </Col>
-         
-          <Col xs="12" md="4">
           <div align="center">
-           <img height="200" width="200"
+          <img height="150" width="150"
            className="rounded-circle img-thumbnail border-warning "
            align="center"
            src="../../static/images/SV.jpg"
            />
-           </div>
+          <FooterSearch/>
+          <h1 className="display-4">{APP_NAME}</h1>
+          <h4 className="display-7">Front Page of Tirupati & Tirumala</h4> 
+          </div>
+          </div>
+          
           </Col>
          
-          <Col xs="12" md="4">
-          <FooterSearch/>
-          </Col>
-          </Row>
-          <hr/>
+          <Col xs="12" md="6">
+          <div align="left">
+          <ButtonGroup>
 
-
-
-
-
-          <Row>
-          <Col xs="12" md="2">
-          <h5>Our Social handle</h5>
-          
-             <Button 
-             className="ISH" 
+         
+            <Button  
              target="_blank" 
              href="https://www.facebook.com/sevenhillstirupati7"
              outline color="light">
@@ -59,69 +48,44 @@ const Footer = ({blog}) => {
 
 
              <Button 
-             className="ISH" 
              target="_blank" 
              href="https://www.instagram.com/sevenhillstirupati/"
             outline color="light">
                <FaInstagram size={30}/>
             </Button>
-             
-          </Col>
+            </ButtonGroup>
 
-           <Col xs="12" md="2">
-            <h5>Services</h5>
-
-
-           </Col>
-             
-
-           <Col xs="12" md="2">
+            <br/>
+            <hr/>
             
+            <ButtonGroup>
+            <Button 
+            href="/contact"
+            outline color = "light"
+            >Contact
+            </Button>
+
             <Button
             href="/blogs"
             target="_blank" 
             outline color = "light"
             >Categories
             </Button>
-         
-           </Col>
-           
-           <Col xs="12" md="2">
-           
-           <Button 
+
+            <Button 
             href="/blogs"
             outline color = "light"
             >Tags
             </Button>
-           
-           </Col>
 
-           <Col xs="12" md="2">
-           <Button 
+            <Button 
             href="/blogs"
             outline color = "light"
             >Blogs
             </Button>
-
-           </Col>
-
-           <Col xs="12" md="2">
-           <Button 
-            href="/contact"
-            outline color = "light"
-            >Contact
-            </Button>
-           </Col>
-
-           
-
-
-
-
-          </Row>
+          </ButtonGroup>
           <hr/>
-          <div align="center">
-          
+          <br/>
           <h5 className="display-6">All Rights reserved {year}</h5>
           <h5>Made with ❤️️</h5>
           <h6>by</h6>
@@ -132,8 +96,8 @@ const Footer = ({blog}) => {
           src="../../static/images/SVSK.png"
           />
           </div>
-          
-          <p className="lead"></p>
+          </Col>
+          </Row>
         </Container>
       </Jumbotron>
     </div>

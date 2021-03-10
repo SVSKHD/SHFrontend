@@ -54,6 +54,7 @@ export default function Home() {
   <Row>
     <Col>
     <div className="IN">
+    <br/>
     <Inav/>
     <div align="center">
     <div className="INH">
