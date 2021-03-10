@@ -5,6 +5,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavbarToggler,
   Button,
   ButtonGroup,
   Container,
@@ -26,23 +27,24 @@ const NavBar = (props) => {
       <Container>
        <Navbar dark expand="md">
        <NavbarBrand href="/">{APP_NAME}</NavbarBrand>
-        <Button outline color="light" onClick={toggle} ><FaGopuram size={30}/></Button>
+       <NavbarToggler outline color="light" onClick={toggle} ><FaGopuram size={30}/></NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
          
          
+          {isAuth() && (
           <Nav className="mr-auto">
            <NavItem>
              <ButtonGroup>
-             <Button href="/blogs" size="sm" color="dark">
+             <Button href="/blogs" size="md" color="dark">
              <b>Blogs</b>
              </Button>
               
 
-             <Button href="/user/crud/blog" size="sm" color="dark">
+             <Button href="/user/crud/blog" size="md" color="dark">
              <FaEdit size={20}/>
              </Button>
 
-             <Button href="/contact" size="sm" color="dark">
+             <Button href="/contact" size="md" color="dark">
              <FaAddressBook size={20}/>
              </Button>
 
@@ -50,6 +52,7 @@ const NavBar = (props) => {
            </NavItem>
           
           </Nav>
+          )}
           <br/>
           
           
@@ -59,7 +62,7 @@ const NavBar = (props) => {
             {!isAuth() && (
               <React.Fragment>
               <Card>
-              <ButtonGroup  size="sm">
+              <ButtonGroup  size="md">
               <Button href="/signup" color="warning"><b>Signup</b></Button>
               <Button href="/signin" color ="success"><b>Signin</b></Button>
               </ButtonGroup>
@@ -73,7 +76,7 @@ const NavBar = (props) => {
               <Link href="/user">
               <ButtonGroup>
               <Button 
-              size="sm" 
+              size="md" 
               outline color ="light"
               >
                 <b>{`${isAuth().name}'s Dashboard`}</b>
@@ -94,7 +97,7 @@ const NavBar = (props) => {
               <Link href="/admin">
               <ButtonGroup>
               <Button 
-              size="sm" 
+              size="md" 
               color ="light"
               >
                 <b>
