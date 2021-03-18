@@ -7,6 +7,9 @@ const Seo = ({title , mtitle ,  keywords , canurl , dcontent , ogcontent , ogdes
     return(
         <div>
             <Head>
+            {/* Adsense */}
+            <script data-ad-client="ca-pub-1721597011729824" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
             {/* schema */}
 
             <script type="application/ld+json">
