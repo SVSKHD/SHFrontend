@@ -7,6 +7,7 @@ import Admin from "../../../Components/auth/Admin"
 
 const CategoryTag = () => {
     return (
+        <div className="BlogIndexT">
         <Layout>
             <Admin>
             <div className="categorytag">
@@ -14,25 +15,26 @@ const CategoryTag = () => {
             </div>
             <Container>
                 <Row>
-                    <CardBody>
                     <Col xs="12" md="6" lg="6">
+                    <CardBody>
                      <h3>Create Categories</h3>
                      <Category/>
-                     <hr/>
-                    </Col>
+                     <br/>
                     </CardBody>
-                   
-                    <CardBody>
+                    </Col>
+
                     <Col xs="12" md="6" lg="6">
+                    <CardBody>
                      <h3>Create Tags</h3>
                      <Tags/>
-                     <hr/>
-                    </Col>
+                     <br/>
                     </CardBody>
+                    </Col>
                 </Row>
             </Container>
            </Admin>
         </Layout>
+    </div>
     );
 };
 

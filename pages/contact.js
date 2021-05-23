@@ -4,7 +4,7 @@ import ContactForm from "../Components/form/contactform"
 import Seo from "../Components/seo"
 const Contact = () =>{
     return(
-    <div>
+    <div >
         <Seo
             title={"Contact us here | Sevenhills Tirupati  "}
             mtitle={`Feel Free to contact us | We will Respond in 24 Hours | Sevenhills Tirupati`}
@@ -16,7 +16,8 @@ const Contact = () =>{
             canurl={`https://sevenhillstirupati.com/contact`}
             />
         <Layout>
-            <Container fluid={true}>
+            <div className="BlogIndexT">
+            <Container>
                <Row>
                    
                    <Col xs="12" sm="12" lg="6" md="6">
@@ -37,6 +38,7 @@ const Contact = () =>{
                
                </Row>
             </Container>
+        </div>
         </Layout>
     </div>
     )

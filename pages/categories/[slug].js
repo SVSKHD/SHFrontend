@@ -29,9 +29,10 @@ const Category = ({category, blogs , query}) =>{
             />
            
            <Layout>
+            <div className="BlogIndexT">
             <Container>
                 <h1 className="display-5"><b>Category : {category.name}</b></h1>
-                <hr/>
+                <br className="mb-4"/>
                 <Row>
                 {blogs.map((b,i)=>
                 <Col xs="12" sm="12" lg="4" md="4">
@@ -42,6 +43,7 @@ const Category = ({category, blogs , query}) =>{
                 )}
                 </Row>
             </Container>
+           </div>
           </Layout>
         </div>
     )

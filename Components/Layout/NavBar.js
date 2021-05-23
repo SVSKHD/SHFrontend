@@ -37,31 +37,139 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/blogs">Blogs</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            
+           
+
+      {isAuth() && (
+      <>
+      <div>
+      <NavItem className="ISH">
+        <ButtonGroup>
+        <Button href="/user/crud/blog" size="sm" color="dark">
+        <FaEdit size={20}/>
+        </Button>
+
+        <Button href="/contact" size="sm" color="dark">
+        <FaAddressBook size={20}/>
+        </Button>
+
+        </ButtonGroup>
+      </NavItem>  
+      </div>
+      </>
+      )}    
+          
+          
+          
+          
           </Nav>
+
+
+
+
+
+
+
+
           <Nav navbar>
-          <UncontrolledDropdown nav inNavbar>
+          
+          {isAuth() && isAuth().role === 0 && (
+          <Button 
+              onClick={() => signout(() => Router.replace(`/signin`))}  
+              color="danger">
+              Signout
+          </Button>
+          )}
+
+          {isAuth() && isAuth().role === 1 && (
+          <Button 
+              onClick={() => signout(() => Router.replace(`/signin`))}  
+              color="danger">
+              Signout
+          </Button>
+          )}
+          
+          {!isAuth() && (
+          <>
+          <UncontrolledDropdown  nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                New User Click here
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                 <Button outline color="dark" href="/signup">
+                 Signup
+                 </Button>
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
+                  <Button outline color="dark" href="/signin"> 
+                  Signin
+                  </Button>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            </>
+            )}
+
+
+      {isAuth() && isAuth().role === 0 && (
+      <>
+      <UncontrolledDropdown nav inNavbar>
+          <DropdownToggle nav caret>
+          <b>{`${isAuth().name}'s Dashboard`}</b>
+          </DropdownToggle>
+          <DropdownMenu right>
+            <DropdownItem>
+             <Button outline color="dark" href="/user">
+              Dashboard
+             </Button>
+            </DropdownItem>
+            <DropdownItem>
+              <NavLink href="/signin">
+              Signin
+              </NavLink>
+            </DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem className="text-danger">
+            <Button 
+            onClick={() => signout(() => Router.replace(`/signin`))} 
+            outline color="danger">
+            Signout
+            </Button>
+            </DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+        </>
+        )}
+
+
+           {isAuth() && isAuth().role === 1 && (
+            <>
+            <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                <b>{`${isAuth().name}'s Dashboard`}</b>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                   <Button outline color="dark" href="/admin">
+                    Dashboard
+                   </Button>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem className="text-danger">
+                 
+                  <Button 
+                  onClick={() => signout(() => Router.replace(`/signin`))} 
+                  outline color="danger">
+                  Signout
+                  </Button>
+                    
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              </>
+           )}
            </Nav>
         </Collapse>
       </Navbar>
@@ -89,7 +197,6 @@ export default NavBar;
       <b>Blogs</b>
       </Button>
        
-
       <Button href="/user/crud/blog" size="sm" color="dark">
       <FaEdit size={20}/>
       </Button>
@@ -108,42 +215,34 @@ export default NavBar;
    <Nav className="ml-auto" navbar>
 
      {/* signin & signup */}
-//      {!isAuth() && (
-//        <React.Fragment>
-//        <Card>
-//        <ButtonGroup  size="sm">
-//        <Button href="/signup" color="warning"><b>Signup</b></Button>
-//        <Button href="/signin" color ="success"><b>Signin</b></Button>
-//        </ButtonGroup>
-//        </Card>
-//        </React.Fragment>
-//      )}
+    
+
+    //  
      
 
-//      {isAuth() && isAuth().role === 0 && (
-//      <React.Fragment>
-//        <Link href="/user">
-//        <ButtonGroup>
-//        <Button 
-//        size="sm" 
-//        outline color ="light"
-//        >
-//          <b>{`${isAuth().name}'s Dashboard`}</b>
-//        </Button>
-//        <Button 
-//        onClick={() => signout(() => Router.replace(`/signin`))} 
-//        color="danger">
-//        <b>Signout</b>
-//        </Button>              
-//        </ButtonGroup>
-//        </Link>
-//      </React.Fragment>
-//      )}
+    
+    //    <React.Fragment>
+    //    <Link href="/user">
+    //    <ButtonGroup>
+    //    <Button 
+    //    size="sm" 
+    //    outline color ="light"
+    //    >
+    //      
+    //    </Button>
+    //    <Button 
+    //    
+    //    color="danger">
+    //    <b>Signout</b>
+    //    </Button>              
+    //    </ButtonGroup>
+    //    </Link>
+    //  </React.Fragment>
 
-//      {isAuth() && isAuth().role === 1 && (
+//     
 //      <React.Fragment>
       
-//        <Link href="/admin">
+//        <Link href="">
 //        <ButtonGroup>
 //        <Button 
 //        size="sm" 
@@ -154,7 +253,7 @@ export default NavBar;
 //          </b>
 //        </Button>
 //        <Button 
-//        onClick={() => signout(() => Router.replace(`/signin`))} 
+//        
 //        color="danger">
 //        <b>Signout</b>
 //        </Button> 
