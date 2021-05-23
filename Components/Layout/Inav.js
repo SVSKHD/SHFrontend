@@ -25,7 +25,8 @@ const Inav = (props) => {
     <div className="Navbar">
       <Navbar light expand="md">
         
-        <NavbarBrand href="/"><img height="100" width="100"
+        <NavbarBrand href="/">
+          <img height="100" width="100"
            className="rounded-circle img-thumbnail border-warning "
            align="center"
            src="../../static/images/SV.jpg"

@@ -2,7 +2,6 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import Search from "../blog/search"
 import {Container} from "reactstrap"
-
 const Layout=(props)=>{
     return(
      <div>
@@ -15,6 +14,7 @@ const Layout=(props)=>{
       {props.children}
       <div className="layoutFot">
       <Footer/>
+      <br/>
       </div>
       </Container>
      </div>

@@ -1,5 +1,5 @@
 import React , {useState} from "react"
-import {Container,Row,Col,Button} from "reactstrap"
+import {Container,Row,Col,Collapse, Button, CardBody, Card} from "reactstrap"
 import {} from "react-icons/fa"
 import {listBlogsWithCategoriesAndTags} from "../../actions/blog"
 import Layout from "../../Components/Layout/Layout"
@@ -19,6 +19,11 @@ const [limit, setLimit] = useState(blogsLimit)
 const [skip,setSkip] = useState(0)
 const [size,setSize] = useState(totalBlogs)
 const [loadedBlogs,setLoadedBlogs] = useState([])
+const [isOpen, setIsOpen] = useState(false);
+
+
+const toggle = () => setIsOpen(!isOpen);
+
 
 const loadMore = () => {
     let toSkip = skip + limit;
@@ -59,26 +64,79 @@ const  showAllBlogs = () =>{
         }
 
 const showAllCategories = () =>{
-    return categories.map((c,i)=>(
-        <Link href={`/categories/${c.slug}`} key={i}>
+    return(
+        <div>
+        <Button  
+        className="shadow-lg"
+        color="light" 
+        onClick={toggle} 
+        style={{ marginBottom: '1rem'}}>
+        <h4 className="BlogFamilyT">
+            Categories <FaCircleNotch className="load" size={25}/>
+        </h4>
+        </Button>
+
+        <Collapse isOpen={isOpen}>
+        <Card className="BlogCategory">
+          <CardBody >
+        {categories.map((c,i)=>(
+            <Link href={`/categories/${c.slug}`} key={i}>
            <Button 
-           className="ISH" 
+           className="shadow-lg ISH" 
            size="sm" 
-           outline color = "info">
+           color = "light">
                <strong>
                    {c.name}
                 </strong>
             </Button>
-        </Link>
-    ))
+           </Link>
+        ))}
+        
+          </CardBody>
+        </Card>
+       
+      </Collapse>
+     </div> 
+       
+    )
 }
 
 const showAllTags = () =>{
-    return tags.map((t,i)=>(
-        <Link href={`/tags/${t.slug}`} key={i}>
-           <Button className="ISH" size="sm" outline color = "info"><strong>{t.name}</strong></Button>
-        </Link>
-    ))
+return(        
+<div>
+<Button 
+className="shadow-lg"
+onClick={toggle} 
+color="light"
+style={{ marginBottom: '1rem'}}
+>
+<h4 className="BlogFamilyT">
+Tags  <FaCircleNotch className="load" size={25}/></h4>
+</Button>
+
+<Collapse isOpen={isOpen}>
+<Card className="BlogCategory">
+  <CardBody >
+{tags.map((t,i)=>(
+    <Link href={`/tags/${t.slug}`} key={i}>
+   <Button 
+   className="shadow-lg ISH" 
+   size="sm" 
+   color = "light">
+       <strong>
+           {t.name}
+        </strong>
+    </Button>
+   </Link>
+))}
+
+  </CardBody>
+</Card>
+
+</Collapse>
+</div> 
+
+)
 }
 
 const showLoadedBlogs = () => {
@@ -105,22 +163,28 @@ const showLoadedBlogs = () => {
             Tirumala Tirupati Balaji , 
             Govinda , Srinivas , Venkatesawara Swamy`}
             />
-        <Layout>
+            <Layout>
             <Container fluid>
-            <h1>Blogs and Stories List</h1>
-            <hr/>
+            <h1 className="BlogIndexT">All about SevenHills Tirupati</h1>
+            <br className="mb-5"/>
+
             <Container>
              <Row>
-            <Col>
-            <h4>Categories</h4>
-            <hr/>
+
+            <Col sm="12" md="6">
+            <div className="text-center">
             {showAllCategories()}
+            </div>
             </Col>
-            <Col>
-            <h4>Tags</h4>
-            <hr/>
+
+
+            <Col sm="12" md="6">
+            <div className="text-center">
             {showAllTags()}
+            </div>
             </Col>
+
+
              </Row>
              <hr/>
              <div>
