@@ -22,7 +22,10 @@ const Inav = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
+   <div>
+    <br className="mb-2"/>
     <div className="Navbar">
+      
       <Navbar light expand="md">
         
         <NavbarBrand href="/">
@@ -47,12 +50,6 @@ const Inav = (props) => {
               <NavLink href="/blogs">Blogs</NavLink>
             </NavItem>
             
-            
-
-
-           
-
-           
           </Nav>
            
           <Nav className="mr-auto" navbar>
@@ -106,6 +103,7 @@ const Inav = (props) => {
 
         </Collapse>
       </Navbar>
+    </div>
     </div>
   );
 }
