@@ -79,7 +79,7 @@ export default function Home() {
     <div>
     
     <Row>
-      
+    <Container fluid>
     <Card>
     <CardBody>
     <Row>
@@ -105,7 +105,7 @@ export default function Home() {
     </CardBody>
     </Card>
   
-    
+    </Container>
     
     
     
@@ -123,8 +123,10 @@ export default function Home() {
     </Col>
     {/* carousel */}
     <Col>
-    <Card>
+    <br/>
+    <Card className="shadow-lg">
     <CardBody>
+    
     <DesiredCarousel/>
     </CardBody>
     </Card>
