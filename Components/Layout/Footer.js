@@ -39,8 +39,9 @@ const Footer = ({blog}) => {
          
 
           <Col xs="12" md="6">
-          <h5>Our Social handle</h5>
           
+             <div align="center">
+             <h5>Our Social handle</h5>
              <Button 
              className="ISH" 
              target="_blank" 
@@ -57,9 +58,10 @@ const Footer = ({blog}) => {
             outline color="light">
                <FaInstagram size={30}/>
             </Button>
-
+          </div>
           <hr/>
           <div>
+          <div align="center">
           <ButtonGroup>
             <Button href="/blogs" color="light">Blogs</Button>
             <Button color="light">Contact us</Button>
@@ -69,6 +71,7 @@ const Footer = ({blog}) => {
          
              
           <br className="mb-5"/>
+          
           <div>
           <h5 className="display-6">All Rights reserved {year}</h5>
           <h5>Made with ❤️️</h5>
@@ -80,6 +83,7 @@ const Footer = ({blog}) => {
           className="rounded-circle img-thumbnail border-warning "
           src="../../static/images/SVSK.png"
           />
+          </div>
           </div>
           </div>
           </Col>
